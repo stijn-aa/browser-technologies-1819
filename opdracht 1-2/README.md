@@ -1,6 +1,7 @@
 # Opdracht 1.2
 
-link naar oba app: https://boekdeelfeature.netlify.com
+link naar oba app client side: https://boekdeelfeature.netlify.com
+link naar oba app server side: [nog niet online werkend gekregen]
 
 ## Tests
 - bandwidth
@@ -55,8 +56,18 @@ Hij leest alles voor in het geselecteerde blok. In principe bruikbaar maar na ve
 ## device lab
 Site ziet er niet uit en knoppen werken niet op touchscreens. In Safari en Chrome op iPhone werken de knoppen wel. Ik gebruik event listeners die ik moet vervangen door button tags.
 
+# Server Side
+## bandwidth
 
+Ik heb de Oba api ontweken en een op github een json file geplaatst die ik opvraag met een fetch request. Dit gaat aanzienlijk sneller dan de oba api wat logisch is. 
 
+## Javascript
+Alle javascript word op de server gedraaid. Je kunt zoeken en een detail pagina opvragen zonder problemen.
+
+## localstorage
+De data die opgehaald word van het json file word opgeslagen in een storage object. Hierdoor kun je ook zonder localstorage de webapp gebruiken.
+## device lab
+Knoppen werken op alle devices omdat het nu links zijn. Styling mag nog professioneler.
 
 
 
