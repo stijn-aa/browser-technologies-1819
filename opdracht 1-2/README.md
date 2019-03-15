@@ -1,6 +1,7 @@
 # Opdracht 1.2
 
 link naar oba app client side: https://boekdeelfeature.netlify.com
+
 link naar oba app server side: [nog niet online werkend gekregen]
 
 ## Tests
