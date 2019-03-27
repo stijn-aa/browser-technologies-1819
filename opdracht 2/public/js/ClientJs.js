@@ -1,67 +1,3 @@
-let currentActive = 0
-let start = false
-
-
-document.querySelector('.volgende').addEventListener('click', function () {
-    if (start === false) {
-        start = true
-        //next page
-        currentActive++
-        const active = document.querySelector('.v' + currentActive)
-        active.setAttribute('active', 'active');
-
-    } else if (currentActive > 0 && currentActive < 3) {
-        //submit waarde naar restulaat
-        const answers = Array.from(active.querySelectorAll(".answers input"))
-        const answerElement = answers.find(function (input) {
-            console.log(input.checked)
-            return (input.checked);
-        })
-        console.log(answerElement)
-        const answer = {
-            [answerElement.name]: answerElement.value
-        }
-        console.log(answer)
-        storage.add(answer)
-
-        //next page
-        const old = document.querySelector('.v' + currentActive)
-        currentActive++
-        const active = document.querySelector('.v' + currentActive)
-        old.setAttribute('active', 'false');
-        active.setAttribute('active', 'active');
-
-    } else if (currentActive === 3) {
-        //submit waarde naar restulaat
-        const active = document.querySelector('.v' + currentActive)
-        const answers = Array.from(active.querySelectorAll(".answers input"))
-        const answerElement = answers.find(function (input) {
-            return (input.checked);
-        })
-        console.log(answerElement)
-        const answer = {
-            [answerElement.name]: answerElement.value
-        }
-        console.log(answer)
-        storage.add(answer)
-        //next page
-    }
-});
-
-document.querySelector('.vorige').addEventListener('click', function () {
-    if (currentActive >= 1) {
-        const old = document.querySelector('.v' + currentActive)
-        currentActive--
-        const active = document.querySelector('.v' + currentActive)
-        old.setAttribute('active', 'false');
-        active.setAttribute('active', 'active');
-
-    } else {
-        console.log(document.querySelector('.v' + currentActive))
-    }
-
-});
-
 const storage = {
     answers: {},
     result: 0,
@@ -92,3 +28,84 @@ const storage = {
 
 
 }
+
+
+function clearActive(nodelist) {
+    nodelist.forEach(node => {
+        node.classList.remove("active");
+    });
+
+    return nodelist;
+};
+
+function getActive(nodelist) {
+    const active = nodelist.find(node => node.classList.contains("active"));
+
+    return (active) ?
+        active :
+        nodelist[0];
+}
+
+function getNext(nodelist) {
+    const active = getActive(nodelist);
+    const next = active.nextElementSibling;
+
+    clearActive(nodelist);
+    next.classList.add("active");
+    return {
+        active,
+        next
+    };
+};
+
+document.querySelector("#start").addEventListener("click", () => {
+    console.log(document.querySelector("#vraag1"))
+    document.querySelector("#vraag1").classList.add("active");
+    const element = document.querySelector(".header");
+    element.parentNode.removeChild(element);
+
+})
+
+document.querySelector(".volgende").addEventListener("click", () => {
+    const vragen = Array.from(document.querySelectorAll(".vraag, .Resultaat"));
+    const {
+        active,
+        next
+    } = getNext(vragen);
+
+    const antwoorden = Array.from(active.querySelectorAll(".answers input"))
+    const answerElement = antwoorden.find(input => input.checked);
+    console.log(active)
+    const answer = {
+        [answerElement.name]: answerElement.value
+    };
+    document.querySelector("#vraag1").classList.remove("active");
+    storage.add(answer);
+    document.querySelector(".volgende").disabled = true;
+
+    if (next.classList.contains("Resultaat")) {
+        storage.calc()
+        document.getElementById("%").innerHTML = storage.result;
+
+        const volgende = document.querySelector(".volgende")
+
+        volgende.disabled = false;
+        volgende.innerHTML = "Opnieuw";
+        volgende.addEventListener("click", function () {
+            location.reload();
+        })
+
+        return
+
+    }
+});
+
+
+
+
+document.querySelectorAll("input").forEach(function (input) {
+    input.addEventListener("input", function () {
+        document.querySelector(".volgende").disabled = false;
+    })
+
+})

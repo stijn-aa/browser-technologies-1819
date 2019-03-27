@@ -9,20 +9,26 @@
 </head>
 
 <body>
+
     <div class="styling" id="top"></div>
-    <h1 id="titel">TOSTI TEST</h1>
+    <header class="header">
+        <h1 id="titel">TOSTI TEST</h1>
 
 
+        <img id="logo" src="/img/tostiLogo.svg" alt="TositiTest logo">
+        <button id="start">Start</button>
+    </header>
+    <div class="nav">
+        <nav>
+            <button class="volgende" disabled>volgende</button>
+        </nav>
+    </div>
     <main>
-        <div id="start">
 
-            <H1>Start</H1>
-        </div>
-
-        <div id="vraag1" class="vraag v1">
+        <article id="vraag1" class="vraag v1">
 
             <H1>Vraag 1: Hoeveel tosti's?</H1>
-            <div class="answers">
+            <form class="answers">
                 <div>
                     <input type="radio" id="a1" name="scoreV1" value="1">
                     <label for="a1">Geen</label>
@@ -35,15 +41,12 @@
                     <input type="radio" id="a3" name="scoreV1" value="5">
                     <label for="a3">Te weinig</label>
                 </div>
-            </div>
-        </div>
+            </form>
+        </article>
 
-
-
-
-        <div id="vraag2" class="vraag v2">
+        <article id="vraag2" class="vraag v2">
             <H1>Vraag 2: Wanneer?</H1>
-            <div class="answers">
+            <form class="answers">
                 <div>
                     <input type="radio" id="a4" name="scoreV2" value="1">
                     <label for="a4">'s Ochtens</label>
@@ -56,12 +59,12 @@
                     <input type="radio" id="a6" name="scoreV2" value="5">
                     <label for="a6">'s Ochtens</label>
                 </div>
-            </div>
-        </div>
+            </form>
+        </article>
 
-        <div id="vraag3" class="vraag v3">
+        <article id="vraag3" class="vraag v3">
             <H1>Vraag 3: Met?</H1>
-            <div class="answers">
+            <form class="answers">
                 <div>
                     <input type="radio" id="a7" name="scoreV3" value="1">
                     <label for="a7">Pizza</label>
@@ -75,19 +78,18 @@
                     <label for="a9">Ketchup</label>
                 </div>
 
-            </div>
-        </div>
+            </form>
+        </article>
 
-        <div class="Resultaat v4">
+        <article class="Resultaat">
             <H1>Resultaat</H1>
 
-            <h1> <span id="%"></span>Tosti</h1>
-        </div>
+            <h1> <span id="%"></span> % Tosti</h1>
+        </article>
     </main>
-    <div class="order">
-        <button class="vorige">vorige</button>
-        <button class="volgende">volgende</button>
-    </div>
+
+
+
 
 
     <div class="styling" id="bottom"></div>

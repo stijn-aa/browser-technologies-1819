@@ -1,26 +1,35 @@
-*{
+* {
   color: white;
   background-repeat: no-repeat;
-overflow: hidden;
+  overflow: hidden; 
 
 }
 
-body{
+body {
   background: #eaeaea;
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
 }
 
-main{
+main {
   display: flex;
+  flex-direction: column;
 }
 
-.vraag{
-  margin: 0% 7% 0% 7%;
+article {
+  margin: auto;
+  padding: -3px;
+  min-width: 200px;
+  max-width: 500px;
+  margin-top: 584px;
+  order: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s linear;
 }
 
-.awnsers div{
+form div {
   background-image: url("/img/blok.svg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -30,42 +39,45 @@ main{
   margin-top: 10px;
 }
 
-.order{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.order button:first-of-type{
-margin-left: 10px;
-margin-right: auto;
-}
-
-.order button:last-of-type{
-  margin-right: 10px;
-  margin-left: auto;
-  }
-
-h1{
-  background-image: url("/img/blok.svg");
+nav {
   padding: 10px;
+  margin: auto;
+  height: 73vh;
+  display: flex;
+  flex-direction: column;
+}
+
+div.nav {
+  position: fixed;
+  left: 50%;
+  top: 115%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  background-image: url(/img/blok.svg);
+  padding: 4%;
   margin: auto;
   margin-top: 45px;
   background-size: 100% 100%;
+  text-align: center;
 }
+
 form {
   padding: 10px;
   margin: auto;
   display: flex;
   flex-direction: column;
 }
-img#logo{
+
+img#logo {
   padding: 10px;
   margin: auto;
   width: 369px;
 
 }
-img#imgTop{
+
+img#imgTop {
   position: fixed;
   margin: auto;
   top: -34vw;
@@ -73,7 +85,7 @@ img#imgTop{
   height: 36vw;
 }
 
-img#imgBottom{
+img#imgBottom {
   position: fixed;
   margin: auto;
   bottom: -33vw;
@@ -85,7 +97,8 @@ a {
   padding: 10px;
   margin: auto;
 }
-form>div{
+
+form>div {
   font: inherit;
   padding: 12px;
   background-image: url(/img/blok.svg);
@@ -94,7 +107,8 @@ form>div{
   transition: ease-in-out .1s;
   background-size: 100% 100%;
 }
-div.styling#top{
+
+div.styling#top {
   background-image: url(/img/blok.svg);
   position: fixed;
   margin: auto;
@@ -103,7 +117,8 @@ div.styling#top{
   height: 36vw;
   background-size: 100% 100%;
 }
-div.styling#bottom{
+
+div.styling#bottom {
   background-image: url(/img/blok.svg);
   position: fixed;
   margin: auto;
@@ -112,21 +127,33 @@ div.styling#bottom{
   height: 34vw;
   background-size: 100% 100%;
 }
-button{
-  
+
+button {
+  visibility: visible;
+  opacity: 1;
   font: inherit;
-  font-size: 6vh;
-  margin: 7vh;
+  font-size: 40px;
   padding: 22px;
   background-image: url(/img/blok.svg);
   background-color: #eaeaea;
   border: none;
   transition: ease-in-out .1s;
   background-size: 100% 100%;
+  transition: opacity 0.5s linear;
 
 
 
 }
+
+header {
+  padding: 10px;
+  margin: auto;
+  height: 73vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
 
 button:hover,
 button:focus {
@@ -134,17 +161,25 @@ button:focus {
 
 }
 
-button:focus {
-    outline: 1px solid rgba(0, 0, 0, 0);
-    outline-offset: 14px;
-}
-
 button:active {
-    transform: scale(0.99);
+  transform: scale(0.99);
 }
 
-[active = active]{
-  background-color: aquamarine;
-  
+button:disabled {
+  opacity: 0;
+  visibility: hidden;
+  background-image: url(/img/blokDis.svg);
+  transition: opacity 0.2s linear;
+}
 
+button:disabled:hover {
+  transform: scale(1);
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+  margin-top: 40px;
+  order: 1;
 }
