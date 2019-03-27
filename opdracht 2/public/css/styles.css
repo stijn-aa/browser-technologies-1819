@@ -1,0 +1,110 @@
+*{
+  color: white;
+  background-repeat: no-repeat;
+}
+
+body{
+  background: #eaeaea;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+h1{
+  background-image: url("/img/blok.svg");
+  padding: 10px;
+  margin: auto;
+  margin-top: 45px;
+  background-size: 100% 100%;
+}
+form {
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+img#logo{
+  padding: 10px;
+  margin: auto;
+  width: 369px;
+
+}
+img#imgTop{
+  position: fixed;
+  margin: auto;
+  top: -34vw;
+  width: 97vw;
+  height: 36vw;
+}
+
+img#imgBottom{
+  position: fixed;
+  margin: auto;
+  bottom: -33vw;
+  width: 94vw;
+  height: 34vw;
+}
+
+a {
+  padding: 10px;
+  margin: auto;
+}
+form>div{
+  font: inherit;
+  padding: 12px;
+  background-image: url(/img/blok.svg);
+  background-color: #eaeaea;
+  border: none;
+  transition: ease-in-out .1s;
+  background-size: 100% 100%;
+}
+div.styling#top{
+  background-image: url(/img/blok.svg);
+  position: fixed;
+  margin: auto;
+  top: -34vw;
+  width: 97vw;
+  height: 36vw;
+  background-size: 100% 100%;
+}
+div.styling#bottom{
+  background-image: url(/img/blok.svg);
+  position: fixed;
+  margin: auto;
+  bottom: -33vw;
+  width: 94vw;
+  height: 34vw;
+  background-size: 100% 100%;
+}
+button{
+  
+  font: inherit;
+  font-size: 6vh;
+  margin: 7vh;
+  padding: 22px;
+  background-image: url(/img/blok.svg);
+  background-color: #eaeaea;
+  border: none;
+  transition: ease-in-out .1s;
+  background-size: 100% 100%;
+
+
+
+}
+
+button:hover,
+button:focus {
+  transform: scale(1.1);
+
+}
+
+button:focus {
+    outline: 1px solid rgba(0, 0, 0, 0);
+    outline-offset: 14px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+
+

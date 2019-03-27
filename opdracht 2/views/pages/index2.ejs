@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/styles2.css">
+    <title>Tostie-Score</title>
+</head>
+
+<body>
+    <div class="styling" id="top"></div>
+    <h1 id="titel">TOSTI TEST</h1>
+
+
+    <main>
+        <div id="start">
+
+            <H1>Start</H1>
+        </div>
+
+        <div id="vraag1" class="vraag v1">
+
+            <H1>Vraag 1: Hoeveel tosti's?</H1>
+            <div class="answers">
+                <div>
+                    <input type="radio" id="a1" name="scoreV1" value="1">
+                    <label for="a1">Geen</label>
+                </div>
+                <div>
+                    <input type="radio" id="a2" name="scoreV1" value="3">
+                    <label for="a2">Te veel</label>
+                </div>
+                <div>
+                    <input type="radio" id="a3" name="scoreV1" value="5">
+                    <label for="a3">Te weinig</label>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="vraag2" class="vraag v2">
+            <H1>Vraag 2: Wanneer?</H1>
+            <div class="answers">
+                <div>
+                    <input type="radio" id="a4" name="scoreV2" value="1">
+                    <label for="a4">'s Ochtens</label>
+                </div>
+                <div>
+                    <input type="radio" id="a5" name="scoreV2" value="3">
+                    <label for="a5">'s Avonds</label>
+                </div>
+                <div>
+                    <input type="radio" id="a6" name="scoreV2" value="5">
+                    <label for="a6">'s Ochtens</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="vraag3" class="vraag v3">
+            <H1>Vraag 3: Met?</H1>
+            <div class="answers">
+                <div>
+                    <input type="radio" id="a7" name="scoreV3" value="1">
+                    <label for="a7">Pizza</label>
+                </div>
+                <div>
+                    <input type="radio" id="a8" name="scoreV3" value="3">
+                    <label for="a8">Mayonnaise</label>
+                </div>
+                <div>
+                    <input type="radio" id="a9" name="scoreV3" value="5">
+                    <label for="a9">Ketchup</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="Resultaat v4">
+            <H1>Resultaat</H1>
+
+            <h1> <span id="%"></span>Tosti</h1>
+        </div>
+    </main>
+    <div class="order">
+        <button class="vorige">vorige</button>
+        <button class="volgende">volgende</button>
+    </div>
+
+
+    <div class="styling" id="bottom"></div>
+    <script src="/js/ClientJs.js" type="module"></script>
+
+</body>
+
+</html>
