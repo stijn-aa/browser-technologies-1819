@@ -15,3 +15,9 @@ serverside versie met js overlay en css enhancements.
 ## 
 
 ![Fullscreen Site](screen1.png)
+
+![detail fullscreen Site](screen2.png)
+
+![mobile Site](screen3.png)
+
+![detail mobile Site](screen4.png)
