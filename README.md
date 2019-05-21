@@ -1,5 +1,7 @@
 # Browser Technologies
 
+link: https://smart-office-stijn.herokuapp.com/
+
 ## Case:
 Ik heb tijdens de 3 weken browser technologies veel onderzocht en gewerkt aan mijn concept. Tijdens deze 3 weken heb ik gewerkt aan een quiz webapp. Door hier aan te werken begreep ik steeds beter waar deze weken over gingen maar door de keuzes die ik gemaakt had tijdens het bouwen heb ik de creteria niet kunnen halen maar wel kunnen begrijpen. Tijdens project 2 heb ik, nu met de juiste kennis, vanaf scratch opnieuw de principes van progresive enahncemant toegepast. 
 
