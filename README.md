@@ -20,7 +20,7 @@ Basis van html semantiek, media queries en PE
 serverside versie met js overlay en css enhancements.
 
 ## wireframe
-![Fullscreen Site](untiteld-1.png)
+![Fullscreen Site](Untitled-1.png)
 
 ## 
 
